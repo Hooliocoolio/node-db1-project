@@ -1,9 +1,12 @@
-const express = require("express");
+// const express = require("express");
+// const welcomeRouter = require("../welcome/welcome");
+// const accountsRouter = require("../routes/accountRoutes");
 
-const db = require("../data/dbConfig.js");
+// const server = express.Router();
 
-const server = express();
+// server.use(express.json());
+// server.use("/", welcomeRouter);
+// server.use("/accounts", accountsRouter);
 
-server.use(express.json());
-
-module.exports = server;
+ 
+// module.exports = server;
