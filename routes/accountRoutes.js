@@ -97,13 +97,13 @@ router.delete("/:id", async (req, res, next) => {
     }
 })
 //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-router.get("/accounts/big", (req, res, next) => {
+router.get("/accounts/big", async (req, res, next) => {
     try {
-        // const [accounts] = await db
-        // .select("name")
-        // .from("accounts")
-        // .where('budget', '>', 100.00)
-        res.send("hello");
+        const accounts = await db
+        .select("name")
+        .from("accounts")
+        .where('budget', '>', 100.00)
+        res.json(accounts);
        
     } catch(err) {
         next(err)
