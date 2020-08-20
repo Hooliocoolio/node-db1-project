@@ -103,6 +103,7 @@ router.get("/accounts/big", async (req, res, next) => {
         .select("name")
         .from("accounts")
         .where('budget', '>', 100.00)
+        .orderBy('name', 'desc' )
         res.json(accounts);
        
     } catch(err) {

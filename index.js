@@ -7,7 +7,7 @@ const port = process.env.PORT || 6000
 
 server.use(express.json())
 server.use("/", welcomeRouter)
-server.use("/", accountsRouter)
+server.use("/accounts", accountsRouter)
 
 server.use((err, req, res, next) => {
 	console.log(err)
